@@ -3,5 +3,14 @@
   width: 300px;
   height: 200px;
   margin: 30px 30px;
-    
+
+}
+
+.header{
+  background-color: aqua;
+  color: rgb(199, 200, 001);
+  font-size: 40px;
+  display: flex;
+transform: translate(-180px) ;
+  margin-left:50%;
 }
