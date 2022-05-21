@@ -1,24 +1,17 @@
-import React, { Component } from 'react';
-
+import React , {Component} from 'react';
 class Counter extends Component {
-    state = { count:this.props } 
-    
-    (inc=()=>{
-        let cnt = this.state.count;
-        this.setState({count:cnt+1})
-    })
-    dec = ()=>{
-        let cnt = this.state.count
-        this.setState({count:cnt- 1})
+    state = {count:0}
+    constructor() {
+        super();
+        setInterval(() => {
+            const cnt = this.state.count;
+            this.setState({count:cnt+1})
+        }, 1000);
     }
-
     render() { 
-        return <div>
-           
-            <button onClick={this.inc}>+</button>
-            <h4>{this.state.count}</h4>
-            <button onClick={this.dec}>-</button>
-           </div>
+        return (<div>
+            <h1>{this.state.count}</h1>
+        </div>  );
     }
 }
  
