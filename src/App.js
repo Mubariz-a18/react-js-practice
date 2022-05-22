@@ -1,13 +1,15 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 import Footer from './Footer'
-import List from './utils/List'
+import ProductList from './utils/productList';
+import 'font-awesome/css/font-awesome.css'
 
 function App() {
-    return (
+    return ( 
         <div>
             <Header/>
-            <List/>
+            <ProductList/>
             <Footer/>
         </div>
     );

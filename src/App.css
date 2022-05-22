@@ -8,9 +8,27 @@
 
 .header{
   background-color: aqua;
-  color: rgb(199, 200, 001);
+  justify-content: center;
+  color: rgb(53, 8, 46);
   font-size: 40px;
   display: flex;
-transform: translate(-180px) ;
-  margin-left:50%;
+ ;
+ 
+} 
+
+
+table{
+  display: grid;
+  border:2px solid steelblue;
+  background-color: aquamarine;
+  width: 50%;
+justify-content: center;
+
 }
+
+table > thead{
+  border:2px solid black;
+  color: gray;
+  width: 200px;
+  margin: 20px 30px;
+} 
