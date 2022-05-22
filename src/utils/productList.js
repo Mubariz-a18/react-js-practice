@@ -1,5 +1,6 @@
 import React from "react";
 import ProductCard from "./productCar";
+import ShouldRender from "./ShouldRender";
 
 
 function ProductList() {
@@ -38,7 +39,10 @@ function ProductList() {
     }
 
 
-   return   <div> {
+   return   <div>
+       
+       
+        {
         products.map((car) => {
             return <ProductCard car = {car} onAddtoCart = {onAddClick}/>
         })

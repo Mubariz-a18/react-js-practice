@@ -1,9 +1,16 @@
+import ShouldRender from "./ShouldRender";
+
 function ProductCard({car, onAddtoCart}) {
  
     const onClickAddToList = ()=>{
      onAddtoCart(car)
  }
-
+//  const AddToListBtn = ({car,onClickAddToList})=>{
+//      return <div  className="card-footer">
+//      {car.inStock? <button disabled={!car.inStock} className="btn btn-danger btn-sm" onClick={onClickAddToList}>Add to list <i className="fa fa-shopping-cart"></i></button>
+//   :null}
+// </div>
+//  }
 
     return (<div className="col-md-3">
     <div  className="card ">
@@ -15,9 +22,12 @@ function ProductCard({car, onAddtoCart}) {
        <h4 className="card-title">{car.name}</h4>
        <b>Top Speed : {car.speed} kmph</b>
    </div>
-   <div className="card-footer">{car.inStock ? 'instock': 'out of stock'}</div>
-  <div> <button className="btn btn-danger btn-sm" onClick={onClickAddToList}>Add to list  <i className="fa fa-shopping-cart"></i></button>
-  </div>
+  {/* <AddToListBtn car = {car} onClickAddToList = {onClickAddToList}/> */}
+  <div  className="card-footer">
+     <ShouldRender cond = {car.inStock}>
+      <button disabled={!car.inStock} className="btn btn-danger btn-sm" onClick={onClickAddToList}>Add to list <i className="fa fa-shopping-cart"></i></button>
+      </ShouldRender>
+</div>
 </div>
 </div>  );
 }
