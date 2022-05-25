@@ -1,3 +1,4 @@
+import IfElse from "./IfElse";
 import ShouldRender from "./ShouldRender";
 
 function ProductCard({car, onAddtoCart}) {
@@ -24,9 +25,13 @@ function ProductCard({car, onAddtoCart}) {
    </div>
   {/* <AddToListBtn car = {car} onClickAddToList = {onClickAddToList}/> */}
   <div  className="card-footer">
-     <ShouldRender cond = {car.inStock}>
-      <button disabled={!car.inStock} className="btn btn-danger btn-sm" onClick={onClickAddToList}>Add to list <i className="fa fa-shopping-cart"></i></button>
-      </ShouldRender>
+      <IfElse cond = {car.inStock}>
+      <button  className="btn btn-danger btn-sm" onClick={onClickAddToList}>Add to list 
+      <i className="fa fa-shopping-cart"></i></button>
+      <button  className="btn btn-danger" onClick={onClickAddToList}>Notify
+      <i className="fa fa-bell"></i></button>
+      </IfElse> 
+    
 </div>
 </div>
 </div>  );
