@@ -1,5 +1,4 @@
 import IfElse from "./IfElse";
-import ShouldRender from "./ShouldRender";
 
 function ProductCard({car, onAddtoCart}) {
  

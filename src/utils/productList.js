@@ -1,6 +1,5 @@
 import React from "react";
 import ProductCard from "./productCar";
-import ShouldRender from "./ShouldRender";
 
 
 function ProductList() {
