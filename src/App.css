@@ -23,19 +23,4 @@
   border:1px solid gray;
   background: white;
 }
-
-table{
-  display: grid;
-  border:2px solid steelblue;
-  background-color: aquamarine;
-  width: 50%;
-justify-content: center;
-
-}
-
-table > thead{
-  border:2px solid black;
-  color: gray;
-  width: 200px;
-  margin: 20px 30px;
-} 
+ 
