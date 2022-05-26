@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React from 'react';
 import UserDesign from './UserDez';
-import Loader from '../image/loader.gif'
 import ShouldRender from '../utils/ShouldRender'
+import Loader from '../utils/Loader';
 
 class UserList extends React.Component {
     state = {
@@ -19,10 +19,7 @@ class UserList extends React.Component {
     render() {
         return <div> 
         < ShouldRender cond = {this.state.loading}>
-         <div className='loader'>
-                <img width='120px' height='50px'
-                    src={Loader}/>loading...
-            </div>
+       <Loader/>
             </ShouldRender>
         
             {
