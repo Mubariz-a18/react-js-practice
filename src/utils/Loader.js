@@ -4,7 +4,7 @@ const Loader = ()=>{
 
    return <div className='loader'>
 <img width='120px' height='50px'
-    src={Loaderimg}/>loading...
+    src={Loaderimg} alt='loader'/>loading...
 </div>
 }
 
