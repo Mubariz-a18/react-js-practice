@@ -1,5 +1,5 @@
-import axios from "axios";
 import React from "react";
+import userService from "./service/userService";
 import Error from "./utils/Error";
 import ShouldRender from "./utils/ShouldRender";
 
@@ -18,9 +18,7 @@ class Register extends React.Component {
       }
 
     onRegisterClick = ()=>{
-     
-      axios.post("http://localhost:9002/signup",this.state.user)
-      .then((res)=>this.setState({firstName:"",lastName:"",email:"",password:"",success:true,ifExists:false,error:false}))
+        userService.register(this.state.user).then((res)=>this.setState({firstName:"",lastName:"",email:"",password:"",success:true,ifExists:false,error:false}))
       .catch((err)=>{
         if(err.message.indexOf('409')>-1){
           this.setState({ifExists:true,sucess:false})
